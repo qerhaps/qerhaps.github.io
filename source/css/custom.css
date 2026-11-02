@@ -1,0 +1,29 @@
+/* 自定义样式：会被注入到每个页面 <head> 中 */
+
+/* 中文字体栈，优先系统字体 */
+:root {
+  --global-font-size: 15px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+/* 首页副标题稍微加粗一点 */
+#site-subtitle {
+  font-weight: 500;
+}
+
+/* 正文行高，长文更好读 */
+#article-container p {
+  line-height: 1.85;
+}
+
+/* 表格在窄屏下可横向滚动，避免撑破卡片 */
+#article-container table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}

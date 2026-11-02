@@ -1,0 +1,24 @@
+# 友链数据，对应 /link/ 页面
+# class_name: 分组名称
+# class_desc: 分组描述
+# link_list: 站点列表
+
+- class_name: 文档与工具
+  class_desc: 搭建与写作时会用到的
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/
+      avatar: https://hexo.io/favicon.ico
+      descr: 快速、简洁且高效的博客框架
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://butterfly.js.org/img/favicon.png
+      descr: 本站使用的主题
+    - name: GitHub
+      link: https://github.com/
+      avatar: https://github.githubassets.com/favicons/favicon.svg
+      descr: 代码托管平台
+
+- class_name: 朋友们
+  class_desc: 值得一读的博客
+  link_list: []
