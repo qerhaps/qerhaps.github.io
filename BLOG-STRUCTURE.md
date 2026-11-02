@@ -86,6 +86,26 @@ npx hexo new page "页面名"            # 进 source/页面名/index.md
 4. `npx hexo clean && npx hexo generate`
 5. 源码提交 `main`，产物 `npx hexo deploy` 推 `gh-pages`
 
+## 网络与部署通道
+
+本机代理会拦截 TLS，HTTPS 方式 `git push` 会报 `CRYPT_E_NO_REVOCATION_CHECK` / `unable to get local issuer certificate`。已改用 **SSH over 443**：
+
+`~/.ssh/config`
+```
+Host github.com
+  HostName ssh.github.com
+  Port 443
+  User git
+```
+
+远端地址统一为 `git@github.com:qerhaps/qerhaps.github.io.git`，站点 `_config.yml` 的 `deploy.repo` 也指向该地址。不要改回 HTTPS。
+
+验证通道：
+
+```bash
+ssh -T git@github.com    # 应返回 Hi qerhaps!
+```
+
 ## 关键配置位置
 
 | 想改什么 | 去哪 |
